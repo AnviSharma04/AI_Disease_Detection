@@ -294,31 +294,31 @@ Stores and displays:
 
 ## 🏠 Landing Page
 
-![Landing Page](assets/landing-page.png)
+![Landing Page](assets/landing-page.jpeg)
 
 ---
 
 ## 📋 Disease Prediction Interface
 
-![Prediction Form](assets/prediction-form.png)
+![Prediction Form](assets/prediction-form.jpeg)
 
 ---
 
 ## 📈 Prediction Result Page
 
-![Result Page](assets/result-page.png)
+![Result Page](assets/result-page.jpeg)
 
 ---
 
 ## 📊 Analytics Dashboard
 
-![Dashboard](assets/dashboard.png)
+![Dashboard](assets/dashboard.jpeg)
 
 ---
 
 ## 👥 Patient Management System
 
-![Patients Page](assets/patients-page.png)
+![Patients Page](assets/patients-page.jpeg)
 
 
 ---
