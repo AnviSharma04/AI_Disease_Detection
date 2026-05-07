@@ -1,68 +1,63 @@
-# 🩺 AI Disease Detection System
+# 🩺 MediPredict AI – Multi-Disease Prediction System
 
-An AI-powered healthcare prediction system that uses Machine Learning techniques to detect diseases based on medical parameters and patient data.
+MediPredict AI is a Flask-based Machine Learning web application designed to predict the risk of multiple diseases using patient clinical data and trained AI models.
 
-This project aims to assist in early disease detection and improve healthcare accessibility through intelligent predictive analytics.
+The system currently supports prediction for:
 
----
+- Diabetes
+- Heart Disease
+- Liver Disease
+- Kidney Disease
+- Lung Disease
 
-# 📌 Project Overview
-
-The AI Disease Detection System analyzes medical attributes provided by the user and predicts the likelihood of disease occurrence using trained Machine Learning models.
-
-The system focuses on:
-- Medical data preprocessing
-- Disease prediction using AI/ML
-- Accuracy evaluation
-- Intelligent healthcare assistance
-- User-friendly disease prediction interface
+The application provides an interactive healthcare dashboard, patient management interface, and real-time disease risk analysis using Machine Learning models.
 
 ---
 
 # 🚀 Features
 
-✅ Disease prediction using Machine Learning  
-✅ Data preprocessing and cleaning  
-✅ Model training and evaluation  
-✅ Interactive prediction interface  
-✅ High prediction accuracy  
-✅ Fast and scalable system  
-✅ Healthcare-oriented AI application  
+✅ Multi-disease prediction system  
+✅ Interactive and responsive UI  
+✅ Individual disease prediction modules  
+✅ AI-powered probability score generation  
+✅ Patient dashboard and analytics  
+✅ Disease-wise prediction visualization  
+✅ Risk-level categorization  
+✅ Flask-based backend integration  
+✅ Machine Learning model deployment using Pickle  
 
 ---
 
-# 🧠 Machine Learning Workflow
+# 🧠 Supported Diseases
 
-The project follows the standard Machine Learning pipeline:
-
-1. Data Collection
-2. Data Cleaning
-3. Feature Selection
-4. Data Preprocessing
-5. Model Training
-6. Model Evaluation
-7. Prediction Generation
+| Disease | Status |
+|---|---|
+| Diabetes Prediction | ✅ |
+| Heart Disease Prediction | ✅ |
+| Liver Disease Prediction | ✅ |
+| Kidney Disease Prediction | ✅ |
+| Lung Disease Prediction | ✅ |
 
 ---
 
 # 🛠️ Tech Stack
 
-## Programming Languages
-- Python
-- HTML
-- CSS
+## Frontend
+- HTML5
+- CSS3
 - JavaScript
 
-## Libraries & Frameworks
-- Pandas
-- NumPy
+## Backend
+- Python
+- Flask
+
+## Machine Learning
 - Scikit-learn
-- Matplotlib
-- Flask / Streamlit (if applicable)
+- NumPy
+- Pickle
 
 ## Development Tools
 - VS Code
-- Google Colab
 - Git
 - GitHub
 
@@ -73,22 +68,39 @@ The project follows the standard Machine Learning pipeline:
 ```plaintext
 AI_Disease_Detection/
 │
-├── dataset/
+├── datasets/
+│   ├── Diabetes_Dataset.xlsx
+│   ├── Liver_Dataset (1).csv
+│   └── lung_disease_data.csv
+│
 ├── models/
-├── notebooks/
-├── static/
+│   ├── diabetes_model.pkl
+│   ├── diabetes_scaler.pkl
+│   ├── heart_model.pkl
+│   ├── heart_scaler.pkl
+│   ├── kidney_model.pkl
+│   ├── kidney_scaler.pkl
+│   ├── liver_model.pkl
+│   ├── liver_scaler.pkl
+│   ├── lung_model.pkl
+│   └── lung_scaler.pkl
+│
 ├── templates/
+│   ├── dashboard.html
+│   ├── index.html
+│   ├── landing.html
+│   ├── result.html
+│   └── result_single.html
+│
 ├── app.py
-├── requirements.txt
-├── README.md
-└── assets/
+└── README.md
 ```
 
 ---
 
 # ⚙️ Installation & Setup
 
-## Step 1: Clone the Repository
+## 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/AnviSharma04/AI_Disease_Detection.git
@@ -96,7 +108,7 @@ git clone https://github.com/AnviSharma04/AI_Disease_Detection.git
 
 ---
 
-## Step 2: Navigate to Project Folder
+## 2️⃣ Navigate to Project Folder
 
 ```bash
 cd AI_Disease_Detection
@@ -104,15 +116,15 @@ cd AI_Disease_Detection
 
 ---
 
-## Step 3: Install Dependencies
+## 3️⃣ Install Required Dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install flask numpy scikit-learn
 ```
 
 ---
 
-## Step 4: Run the Application
+## 4️⃣ Run the Flask Application
 
 ```bash
 python app.py
@@ -120,55 +132,216 @@ python app.py
 
 ---
 
-# 📊 Dataset Information
+## 5️⃣ Open in Browser
 
-The project uses healthcare datasets containing medical attributes and diagnostic parameters for disease prediction.
+```plaintext
+http://127.0.0.1:5000/
+```
 
-Typical features may include:
-- Blood Pressure
+---
+
+# 🧠 Machine Learning Models
+
+The project uses pre-trained Machine Learning models stored as `.pkl` files.
+
+Each disease module contains:
+
+- Prediction Model
+- Feature Scaler
+
+The models are loaded dynamically using Python Pickle.
+
+Example:
+
+```python
+diabetes_model  = load_file("diabetes_model.pkl")
+diabetes_scaler = load_file("diabetes_scaler.pkl")
+```
+
+---
+
+# 📊 Prediction Modules
+
+## Diabetes Prediction
+Uses parameters such as:
 - Glucose Level
-- Hemoglobin
 - BMI
-- Age
-- Serum Creatinine
-- Sugar Level
+- Blood Pressure
+- Insulin
+- HbA1c
+- Family History
+- Physical Activity
+
+---
+
+## Heart Disease Prediction
+Uses:
+- Cholesterol
+- ECG Results
+- Chest Pain Type
+- Heart Rate
+- Blood Pressure
+- BMI
+- Smoking History
+
+---
+
+## Liver Disease Prediction
+Uses:
+- Bilirubin Levels
+- Albumin
+- Protein Levels
+- Alkaline Phosphotase
+- Aminotransferase Values
+
+---
+
+## Kidney Disease Prediction
+Uses:
+- Creatinine
+- Urea
+- Blood Pressure
 - Albumin
 
 ---
 
-# 📈 Model Performance
-
-| Model | Accuracy |
-|---|---|
-| Random Forest | High |
-| Logistic Regression | High |
-| Support Vector Machine | High |
-| Decision Tree | High |
+## Lung Disease Prediction
+Uses:
+- Lung Capacity
+- Smoking Status
+- Hospital Visits
+- Disease Type
+- Treatment Type
 
 ---
 
-# 🖥️ Screenshots
+# 🖥️ Application Pages
 
-## Home Page
-(Add screenshot here)
+## 🏠 Landing Page
+Displays the introduction and overview of the MediPredict AI platform.
 
-## Prediction Interface
-(Add screenshot here)
+Features:
+- Disease overview
+- AI-powered healthcare presentation
+- Navigation dashboard
 
-## Results Page
-(Add screenshot here)
+---
+
+## 📋 Prediction Interface
+Users can:
+- Select a disease
+- Enter clinical data
+- Generate AI-based predictions
+
+Each disease contains a separate input form with disease-specific parameters.
+
+---
+
+## 📈 Result Page
+Displays:
+- Prediction percentage
+- Risk category
+- Healthy score
+- AI-generated disease risk analysis
+
+---
+
+## 📊 Dashboard
+Includes:
+- Total predictions
+- High-risk cases
+- Average risk score
+- Disease breakdown charts
+- Recent predictions
+
+---
+
+## 👥 Patient Management
+Stores and displays:
+- Patient IDs
+- Prediction history
+- Disease records
+- Risk scores
+
+---
+
+# 🔄 Flask Routes
+
+| Route | Description |
+|---|---|
+| `/landing` | Landing Page |
+| `/` | Main Prediction Page |
+| `/dashboard` | Analytics Dashboard |
+| `/predict` | Predict all diseases |
+| `/predict_single` | Predict selected disease |
+
+---
+
+# 📌 Core Functionalities
+
+- Dynamic disease prediction
+- Multi-model integration
+- Real-time risk analysis
+- Form-based clinical data collection
+- Dashboard analytics visualization
+- Patient record interface
+
+---
+
+# 📷 Application Screenshots
+
+---
+
+## 🏠 Landing Page
+
+![Landing Page](assets/landing-page.png)
+
+---
+
+## 📋 Disease Prediction Interface
+
+![Prediction Form](assets/prediction-form.png)
+
+---
+
+## 📈 Prediction Result Page
+
+![Result Page](assets/result-page.png)
+
+---
+
+## 📊 Analytics Dashboard
+
+![Dashboard](assets/dashboard.png)
+
+---
+
+## 👥 Patient Management System
+
+![Patients Page](assets/patients-page.png)
+
 
 ---
 
 # 🔮 Future Improvements
 
+- Database integration
+- User authentication system
 - Cloud deployment
-- Mobile application integration
-- Multiple disease prediction support
-- Real-time medical report analysis
-- AI chatbot integration
-- Improved UI/UX
-- Advanced Deep Learning models
+- Medical report PDF export
+- Deep Learning integration
+- Real-time hospital API integration
+- Mobile responsive optimization
+
+---
+
+# ⚠️ Disclaimer
+
+This application is developed for educational and research purposes only.
+
+The prediction results generated by the system are based on Machine Learning models and should not be considered professional medical advice or diagnosis.
+
+Always consult qualified healthcare professionals for medical decisions.
 
 ---
 
@@ -184,17 +357,24 @@ Typical features may include:
 
 # 📚 Learning Outcomes
 
-Through this project, we explored:
-- Machine Learning concepts
-- Medical data analysis
-- Data preprocessing
-- Model optimization
-- Git & GitHub collaboration
-- Web application integration
+This project demonstrates:
+- Flask web development
+- Machine Learning deployment
+- Healthcare data analysis
+- Predictive analytics
+- Frontend-backend integration
+- AI model integration using Pickle
 
 ---
 
+# ⭐ GitHub Repository
+
+Repository Link:
+
+https://github.com/AnviSharma04/AI_Disease_Detection
+
+---
 
 # 📄 License
 
-This project is developed for educational and research purposes.
+This project is intended for academic and educational purposes.
