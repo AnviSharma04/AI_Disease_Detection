@@ -175,7 +175,10 @@ Typical features may include:
 # 👨‍💻 Contributors
 
 - Anvi Sharma
-- Project Team Members
+- Anuj Bhandwalkar
+- Anushka Kalbhor
+- Anuradha Sawant
+- Gayatri Aradhye
 
 ---
 
@@ -191,35 +194,7 @@ Through this project, we explored:
 
 ---
 
-# 🤝 Contribution Guidelines
-
-Contributions are welcome.
-
-To contribute:
-
-1. Fork the repository
-2. Create a new branch
-3. Commit your changes
-4. Push the branch
-5. Open a Pull Request
-
----
 
 # 📄 License
 
 This project is developed for educational and research purposes.
-
----
-
-# ⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub.
-
----
-
-# 📬 Contact
-
-For queries or collaboration opportunities:
-
-GitHub:
-https://github.com/AnviSharma04
