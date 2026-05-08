@@ -367,13 +367,6 @@ This project demonstrates:
 
 ---
 
-# ⭐ GitHub Repository
-
-Repository Link:
-
-https://github.com/AnviSharma04/AI_Disease_Detection
-
----
 
 # 📄 License
 
