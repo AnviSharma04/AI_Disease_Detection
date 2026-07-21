@@ -140,7 +140,7 @@ http://127.0.0.1:5000/
 
 ---
 
-# 🧠 Machine Learning Models
+# 🧠 Machine Learning Models :
 
 The project uses pre-trained Machine Learning models stored as `.pkl` files.
 
